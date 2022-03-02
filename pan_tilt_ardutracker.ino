@@ -1,5 +1,7 @@
 // Sweep
 // by ALGAN_UAV_TEAM
+// 03.03.2022 
+//tilt 180 derece
 
 #include <Stepper.h>
 #include <Servo.h> 
@@ -145,9 +147,9 @@ void loop()
          
            tilt_interpVal = ((tiltVal-minPWM) * 360) / (maxPWM-minPWM);  
            
-            if (tilt_interpVal > 360)
+            if (tilt_interpVal > 180)
             {
-              tilt_interpVal = 360;
+              tilt_interpVal = 180;
             }
           
             if (tilt_interpVal < 0)
